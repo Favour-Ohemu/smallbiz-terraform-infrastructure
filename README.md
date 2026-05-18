@@ -14,12 +14,12 @@ Resources are deployed across two availability zones in us-east-2. The RDS DB su
 
 ## What This Project Builds
 
-**| Service | Purpose |**
+| Service | Purpose |
 |---|---|
 | VPC | Isolated network environment for all resources |
 | Public Subnet | Hosts the EC2 web server with internet access |
 | Private Subnet 1 | Hosts the RDS database, no internet access |
-| Private Subnet 2 | RDS failover subnet |
+| Private Subnet 2 | RDS failover subnet, required by AWS across two AZs |
 | Internet Gateway | Entry and exit point for internet traffic |
 | Route Tables | Controls traffic routing between subnets and internet |
 | EC2 (NGINX) | Web server serving the application |
